@@ -7,9 +7,14 @@
 //
 
 #include <iostream>
-
+#include "binarySearchTree.h"
+void test()
+{
+    binarySearchTree<int>* tree=new binarySearchTree<int>();
+}
 int main(int argc, const char * argv[]) {
     // insert code here...
+    test();
     std::cout << "Hello, World!\n";
     return 0;
 }

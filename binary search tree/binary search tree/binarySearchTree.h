@@ -6,8 +6,25 @@
 //  Copyright (c) 2015年 guoskyhero. All rights reserved.
 //
 
-#ifndef binary_search_tree_binarySearchTree_h
-#define binary_search_tree_binarySearchTree_h
+#ifndef __binary_search_tree__binarySearchTree__
+#define __binary_search_tree__binarySearchTree__
 
+#include <stdio.h>
+#include "binaryTreeNode.h"
+template<class T>
+class binarySearchTree
+{
+private:
+    int size;
+    binarySearchTreeNode<T>* root;
+public:
+    binarySearchTree()
+    {
+        size=0;
+        root=NULL;
+    };
+    void push(T val);
+    
+};
 
-#endif
+#endif /* defined(__binary_search_tree__binarySearchTree__) */

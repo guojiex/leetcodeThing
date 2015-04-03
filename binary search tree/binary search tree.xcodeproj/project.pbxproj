@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		180652801ACEC15B0007F2C9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1806527F1ACEC15B0007F2C9 /* main.cpp */; };
+		1806528A1ACEC31E0007F2C9 /* binarySearchTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 180652881ACEC31E0007F2C9 /* binarySearchTree.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,7 +26,9 @@
 /* Begin PBXFileReference section */
 		1806527C1ACEC15B0007F2C9 /* binary search tree */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "binary search tree"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1806527F1ACEC15B0007F2C9 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		180652861ACEC2450007F2C9 /* binarySearchTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = binarySearchTree.h; sourceTree = "<group>"; };
+		180652881ACEC31E0007F2C9 /* binarySearchTree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = binarySearchTree.cpp; sourceTree = "<group>"; };
+		180652891ACEC31E0007F2C9 /* binarySearchTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = binarySearchTree.h; sourceTree = "<group>"; };
+		1806528B1ACEC4910007F2C9 /* binaryTreeNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = binaryTreeNode.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +61,20 @@
 		1806527E1ACEC15B0007F2C9 /* binary search tree */ = {
 			isa = PBXGroup;
 			children = (
+				180652871ACEC3000007F2C9 /* model */,
 				1806527F1ACEC15B0007F2C9 /* main.cpp */,
-				180652861ACEC2450007F2C9 /* binarySearchTree.h */,
 			);
 			path = "binary search tree";
+			sourceTree = "<group>";
+		};
+		180652871ACEC3000007F2C9 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				180652881ACEC31E0007F2C9 /* binarySearchTree.cpp */,
+				180652891ACEC31E0007F2C9 /* binarySearchTree.h */,
+				1806528B1ACEC4910007F2C9 /* binaryTreeNode.h */,
+			);
+			name = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +133,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1806528A1ACEC31E0007F2C9 /* binarySearchTree.cpp in Sources */,
 				180652801ACEC15B0007F2C9 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
