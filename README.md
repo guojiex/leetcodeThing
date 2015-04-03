@@ -1,0 +1,2 @@
+# leetcodeThing
+my leetcode codes
