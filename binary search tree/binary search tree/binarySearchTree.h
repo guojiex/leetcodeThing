@@ -23,7 +23,45 @@ public:
         size=0;
         root=NULL;
     };
-    void push(T val);
+    binarySearchTree<T>(T rootVal)
+    {
+        size=0;
+        this->push(rootVal);
+    };
+    binarySearchTreeNode<T>*  push(const T val)
+    {
+        if(this->root==nullptr)
+        {
+            root=new binarySearchTreeNode<T>(val);
+            ++size;
+            return root;
+        }else{
+            return this->push(val,root);
+        }
+    };
+    binarySearchTreeNode<T>* push(const T val,binarySearchTreeNode<T>* pointer)
+    {
+        if(val<pointer->getValue())
+        {
+            if(pointer->hasLeftChild())
+                push(val,pointer->getLeftChild());
+            else
+            {
+                ++size;
+                return pointer->setLeftChild(new binarySearchTreeNode<T>(val));
+            }
+        }else if(val > pointer->getValue())
+        {
+            if(pointer->hasRightChild())
+                push(val,pointer->getRightChild());
+            else
+            {
+                ++size;
+                return pointer->setRightChild(new binarySearchTreeNode<T>(val));
+            }
+        }        
+        return nullptr;
+    };
     
 };
 

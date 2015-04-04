@@ -10,7 +10,8 @@
 #include "binarySearchTree.h"
 void test()
 {
-    binarySearchTree<int>* tree=new binarySearchTree<int>();
+    binarySearchTree<int>* tree=new binarySearchTree<int>(15);
+    tree->push(25);
 }
 int main(int argc, const char * argv[]) {
     // insert code here...

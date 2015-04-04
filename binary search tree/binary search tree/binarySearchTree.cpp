@@ -7,14 +7,4 @@
 //
 
 #include "binarySearchTree.h"
-template<class T>
-void binarySearchTree<T>::push(T val)
-{
-  if(this->root==nullptr)
-  {
-      root=new binarySearchTreeNode<T>(val);
-      ++size;
-  }else{
-      
-  }
-};
+
