@@ -17,27 +17,21 @@ class binarySearchTree
 private:
     int size;
     binarySearchTreeNode<T>* root;
-public:
-    binarySearchTree()
+    void inorderTraversal(binarySearchTreeNode<T>* pointer)
     {
-        size=0;
-        root=NULL;
+        if(pointer->hasLeftChild())
+            inorderTraversal(pointer->getLeftChild());
+        printf("%d ",pointer->getValue());
+        if(pointer->hasRightChild())
+            inorderTraversal(pointer->getRightChild());
     };
-    binarySearchTree<T>(T rootVal)
+    void firstorderTraversal(binarySearchTreeNode<T>* pointer)
     {
-        size=0;
-        this->push(rootVal);
-    };
-    binarySearchTreeNode<T>*  push(const T val)
-    {
-        if(this->root==nullptr)
-        {
-            root=new binarySearchTreeNode<T>(val);
-            ++size;
-            return root;
-        }else{
-            return this->push(val,root);
-        }
+        printf("%d ",pointer->getValue());
+        if(pointer->hasLeftChild())
+            inorderTraversal(pointer->getLeftChild());
+        if(pointer->hasRightChild())
+            inorderTraversal(pointer->getRightChild());
     };
     binarySearchTreeNode<T>* push(const T val,binarySearchTreeNode<T>* pointer)
     {
@@ -59,10 +53,39 @@ public:
                 ++size;
                 return pointer->setRightChild(new binarySearchTreeNode<T>(val));
             }
-        }        
+        }
         return nullptr;
     };
+public:
+    int getSize(){return size;};
+    binarySearchTree<T>(T rootVal)
+    {
+        size=0;
+        this->push(rootVal);
+    };
+    void inorderTraversal()//中序遍历
+    {
+        inorderTraversal(root);
+        printf("中序遍历完成 size:%d \n",this->size);
+    };
     
+    void firstorderTraversal()//先序遍历
+    {
+        firstorderTraversal(root);
+        printf("先序遍历完成 size:%d \n",this->size);
+    };
+    
+    binarySearchTreeNode<T>*  push(const T val)
+    {
+        if(this->root==nullptr)
+        {
+            root=new binarySearchTreeNode<T>(val);
+            ++size;
+            return root;
+        }else{
+            return this->push(val,root);
+        }
+    };
 };
 
 #endif /* defined(__binary_search_tree__binarySearchTree__) */
