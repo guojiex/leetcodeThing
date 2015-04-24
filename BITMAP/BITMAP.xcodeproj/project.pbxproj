@@ -26,6 +26,7 @@
 		18ABC8D01AE9E731001D33D9 /* BITMAP */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BITMAP; sourceTree = BUILT_PRODUCTS_DIR; };
 		18ABC8D31AE9E731001D33D9 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		18ABC8DC1AE9E787001D33D9 /* bitmap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bitmap.h; sourceTree = "<group>"; };
+		18ABC8E21AEA315A001D33D9 /* bitmapUnittester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bitmapUnittester.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +59,7 @@
 		18ABC8D21AE9E731001D33D9 /* BITMAP */ = {
 			isa = PBXGroup;
 			children = (
+				18ABC8DE1AEA30F6001D33D9 /* unit test */,
 				18ABC8DA1AE9E765001D33D9 /* model */,
 				18ABC8D31AE9E731001D33D9 /* main.cpp */,
 			);
@@ -70,6 +72,14 @@
 				18ABC8DC1AE9E787001D33D9 /* bitmap.h */,
 			);
 			name = model;
+			sourceTree = "<group>";
+		};
+		18ABC8DE1AEA30F6001D33D9 /* unit test */ = {
+			isa = PBXGroup;
+			children = (
+				18ABC8E21AEA315A001D33D9 /* bitmapUnittester.h */,
+			);
+			name = "unit test";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +148,7 @@
 		18ABC8D51AE9E731001D33D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -178,7 +188,7 @@
 		18ABC8D61AE9E731001D33D9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;

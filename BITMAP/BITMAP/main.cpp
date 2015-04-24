@@ -7,12 +7,15 @@
 //
 
 #include <iostream>
-#include "bitmap.h"
+//#include "bitmap.h"
+#include "bitmapUnittester.h"
 void test()
 {
-    bitmap test;
-    test.autoUnitTest(10000);
-    test.autoUnitTest(1000000);
+    //bitmap test;
+    //test.autoUnitTest(10000);
+    //test.autoUnitTest(1000000);
+    bitmapUnittester tester;
+    tester.runTest();
 }
 int main(int argc, const char * argv[]) {
     // insert code here...
