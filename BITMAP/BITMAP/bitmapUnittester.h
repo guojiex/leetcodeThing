@@ -18,8 +18,8 @@ class bitmapUnittester
 private:
     ///the bitmap object
     bitmap test;
-    int _left=1000000;
-    int _right=1000012;
+    int _left;//=1000000;
+    int _right;//=1000012;
     bool testSetAndReset(const int left,const int right)
     {
         assert(left<=right);
@@ -66,7 +66,7 @@ private:
         return true;
     }
 public:
-    bitmapUnittester(){}
+    bitmapUnittester():_left(100000),_right(100012){}
     bool runTest(){
         int success=0;
         int total=0;

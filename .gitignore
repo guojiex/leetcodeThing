@@ -28,3 +28,5 @@
 *.app
 
 BITMAP/BITMAP.xcodeproj/project.xcworkspace/xcuserdata/apple.xcuserdatad/UserInterfaceState.xcuserstate
+
+BITMAP/BITMAP/bitmap

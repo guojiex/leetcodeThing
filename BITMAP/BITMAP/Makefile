@@ -2,14 +2,12 @@ PROJ = bitmap
 CC = g++
 
 CFLAGS = -c -g -Wall -I/opt/local/include 
-LDFLAGS = -L/opt/local/lib 
-LIBS = -ldl
 OBJS = $(patsubst %.cpp,%.o,$(wildcard *.cpp))
 
 all: $(PROJ)
 
 $(PROJ): $(OBJS)
-	$(CC) $(LDFLAGS) $^ -o $@ $(LIBS) $(VAR)
+	$(CC)  $^ -o $@ $(VAR)
 
 %.o: %.cpp
 	$(CC) $(CFLAGS) $< -o $@
