@@ -40,8 +40,8 @@ public:
         int bit_location=i&MASK;//inside that 32 bits, which bit should be set
         a[arrayindex] &= !1<<bit_location;//reverse the bit and use and operation to make it 0
     }
-    int getMaxSize(){return 1+N/BITSPERWORD;}
-    bool isNumberIn(const int i)
+    int getMaxSize() const{return 1+N/BITSPERWORD;}
+    bool isNumberIn(const int i) const
     {
         int arrayindex=i>>SHIFT;//which 32 bits it belongs to
         int bit_location=i&MASK;//inside that 32 bits, which bit should be set
@@ -69,7 +69,7 @@ public:
     {
         memset(&a, 0, sizeof(int)*(1+N/BITSPERWORD));
     }
-    std::vector<int> sortedArray()
+    std::vector<int> sortedArray() const
     {
         std::vector<int> res;
         int temp=0;
