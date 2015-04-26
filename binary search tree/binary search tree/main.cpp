@@ -15,6 +15,7 @@ void testBinarySearchTree()
     tree->push(10);
     tree->push(2);
     tree->inorderTraversal();
+    tree->firstorderTraversal();
 }
 int main(int argc, const char * argv[]) {
     // insert code here...

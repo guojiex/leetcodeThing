@@ -17,7 +17,7 @@ class binarySearchTree
 private:
     int size;
     binarySearchTreeNode<T>* root;
-    void inorderTraversal(binarySearchTreeNode<T>* pointer)
+    void inorderTraversal(binarySearchTreeNode<T>* pointer) const
     {
         if(pointer->hasLeftChild())
             inorderTraversal(pointer->getLeftChild());
@@ -25,7 +25,7 @@ private:
         if(pointer->hasRightChild())
             inorderTraversal(pointer->getRightChild());
     };
-    void firstorderTraversal(binarySearchTreeNode<T>* pointer)
+    void firstorderTraversal(binarySearchTreeNode<T>* pointer) const
     {
         printf("%d ",pointer->getValue());
         if(pointer->hasLeftChild())
@@ -39,7 +39,7 @@ private:
         {
             if(pointer->hasLeftChild())
                 push(val,pointer->getLeftChild());
-            else
+            else 
             {
                 ++size;
                 return pointer->setLeftChild(new binarySearchTreeNode<T>(val));
@@ -57,19 +57,19 @@ private:
         return nullptr;
     };
 public:
-    int getSize(){return size;};
+    int getSize() const {return size;};
     binarySearchTree<T>(T rootVal)
     {
         size=0;
         this->push(rootVal);
     };
-    void inorderTraversal()//中序遍历
+    void inorderTraversal() const //中序遍历
     {
         inorderTraversal(root);
         printf("中序遍历完成 size:%d \n",this->size);
     };
     
-    void firstorderTraversal()//先序遍历
+    void firstorderTraversal()const //先序遍历
     {
         firstorderTraversal(root);
         printf("先序遍历完成 size:%d \n",this->size);
