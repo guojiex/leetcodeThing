@@ -55,8 +55,8 @@ private:
     bool testSortedArray()
     {
         printf("start to test sorted array\n");
-        int temp[]={10000,234,11,43,22,78,56};
-        int tempsize=7;
+        int temp[]={10000,234,11,44,45,43,22,78,56,1002};
+        int tempsize=10;
         for(int i=0;i<tempsize;++i)
             this->test.set(temp[i]);
         std::vector<int > res=test.sortedArray();
