@@ -10,7 +10,7 @@ Example: 19 is a happy number
 62 + 82 = 100
 12 + 02 + 02 = 1
 #code
-class Solution {
+	class Solution {
     private:
     //no matter the order of each ints 
     vector<int> getEachSingleIntOfAnInt(int n)
@@ -30,7 +30,7 @@ class Solution {
             sum+=eachInt[i]*eachInt[i];
         return sum;
     }
-public:
+	public:
     bool isHappy(int n) {
         set<int> s1; 
         int size=s1.size();
@@ -45,4 +45,4 @@ public:
             size=s1.size();
         }
     }
-};
+	};

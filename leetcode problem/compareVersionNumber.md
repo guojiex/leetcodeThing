@@ -10,7 +10,7 @@ Here is an example of version numbers ordering:
 
 0.1 < 1.1 < 1.2 < 13.37
 ##Code
-class Solution {
+	class Solution {
     vector<int> getVersionInts(const string version)
     {
         vector<int> res;
@@ -31,8 +31,7 @@ class Solution {
             res.push_back(atoi(temp.c_str()));
         return res;
     }
-    
-public:
+	public:
     int compareVersion(string version1, string version2) {
         /*getLeftRightString(version1);
         int leftInt1=atoi(left.c_str());
@@ -60,7 +59,7 @@ public:
             return 0;
         }else
             return 0;
-    }
-};
+    	}
+	};
 ##Time 
 5 ms

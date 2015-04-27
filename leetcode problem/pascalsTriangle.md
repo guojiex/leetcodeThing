@@ -13,8 +13,8 @@ Return
  [1,4,6,4,1]
 ]
 ##solution
-class Solution {
-public:
+	class Solution {
+	public:
     vector<vector<int> > generate(int numRows) {
         vector<vector<int>> result;
         for(int i=0;i<numRows;++i)
@@ -33,4 +33,4 @@ public:
         }
         return result;
     }
-};
+	};

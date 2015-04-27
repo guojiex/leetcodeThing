@@ -13,17 +13,18 @@ return [1,2,3].
 
 Note: Recursive solution is trivial, could you do it iteratively?
 ##solution
-/**
- * Definition for binary tree
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
-class Solution {
-public:
+
+	//
+ 	 Definition for binary tree
+ 	 struct TreeNode {
+ 	     int val;
+ 	     TreeNode *left;
+ 	     TreeNode *right;
+ 	     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ 	 };
+ 	///
+	class Solution {
+	public:
     void preorderTraversal(TreeNode* node,vector<int> &res)
     {
         
@@ -45,4 +46,4 @@ public:
             preorderTraversal(root,result);
         return result;
     }
-};
+	};
