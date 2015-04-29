@@ -8,7 +8,7 @@
 #ifndef doubleLinkedList_doubleLinkedList_h
 #define doubleLinkedList_doubleLinkedList_h
 #include <vector>
-#include "ListNode.h"
+#include "doubleLinkedListNode.h"
 namespace guo_data_structure
 {
        

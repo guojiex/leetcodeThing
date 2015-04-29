@@ -26,7 +26,7 @@
 		184D02B21AEF8E1000DD236E /* doubleLinkedList */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = doubleLinkedList; sourceTree = BUILT_PRODUCTS_DIR; };
 		184D02B51AEF8E1000DD236E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		184D02BD1AEFA2DB00DD236E /* doubleLinkedList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = doubleLinkedList.h; sourceTree = "<group>"; };
-		184D02BE1AEFAEA800DD236E /* ListNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListNode.h; sourceTree = "<group>"; };
+		184D02BE1AEFAEA800DD236E /* doubleLinkedListNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = doubleLinkedListNode.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				184D02BD1AEFA2DB00DD236E /* doubleLinkedList.h */,
-				184D02BE1AEFAEA800DD236E /* ListNode.h */,
+				184D02BE1AEFAEA800DD236E /* doubleLinkedListNode.h */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -247,6 +247,7 @@
 				184D02BB1AEF8E1000DD236E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
