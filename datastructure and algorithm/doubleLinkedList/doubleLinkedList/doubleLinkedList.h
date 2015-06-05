@@ -9,9 +9,38 @@
 #define doubleLinkedList_doubleLinkedList_h
 #include <vector>
 #include "doubleLinkedListNode.h"
-namespace guo_data_structure
+namespace guo_doubleLinkedList
 {
-       
+    template<class T>
+    class iterator
+    {
+    private:
+        ListNode<T>* cur;
+    public:
+        iterator():cur(nullptr){}
+        iterator(ListNode<T> *p):cur(p){}
+        iterator<T>& operator=(const iterator &other)
+        {
+            this->cur=other.cur;
+            return *this;
+        }
+        iterator<T>& operator++()
+        {
+            this->cur=this->cur->Next();
+            return *this;
+        }
+        T getValue()const
+        {
+            if(cur)
+                return cur->get();
+            else
+            {
+                printf("error in double Linked List Iterator:getValue -> NULL ptr of cur\n");
+                return NULL;
+            }
+        }
+    };
+    
     template<class T>
     class doubleLinkedList
     {
@@ -26,7 +55,10 @@ namespace guo_data_structure
             size=0;
         }
         bool empty()const{return size==0;}
-        
+        iterator<T> begin() const
+        {
+            return iterator<T>(this->head);
+        }
         std::vector<T> getAllValue()
         {
             std::vector<T> res;
@@ -101,6 +133,7 @@ namespace guo_data_structure
         ListNode<T>* back()const{return tail;}
         int getSize()const{return size;}
     };
+    
 }
 
 #endif

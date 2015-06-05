@@ -33,7 +33,6 @@ public:
     }
     ListNode* Next()const{return next;}
     ListNode* Parent()const {return parent;}
-    
 };
 
 
