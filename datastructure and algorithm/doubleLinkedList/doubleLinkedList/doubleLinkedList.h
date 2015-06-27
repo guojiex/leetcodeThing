@@ -12,32 +12,22 @@
 namespace guo_doubleLinkedList
 {
     template<class T>
-    class iterator
+    class iterator:ListNode<T>
     {
-    private:
-        ListNode<T>* cur;
     public:
-        iterator():cur(nullptr){}
-        iterator(ListNode<T> *p):cur(p){}
         iterator<T>& operator=(const iterator &other)
         {
-            this->cur=other.cur;
+            this=other;
             return *this;
+        }
+        bool operator==(const iterator &other)
+        {
+            return this==other;
         }
         iterator<T>& operator++()
         {
-            this->cur=this->cur->Next();
+            this=this->Next();
             return *this;
-        }
-        T getValue()const
-        {
-            if(cur)
-                return cur->get();
-            else
-            {
-                printf("error in double Linked List Iterator:getValue -> NULL ptr of cur\n");
-                return NULL;
-            }
         }
     };
     
@@ -58,6 +48,10 @@ namespace guo_doubleLinkedList
         iterator<T> begin() const
         {
             return iterator<T>(this->head);
+        }
+        iterator<T> end() const
+        {
+            return NULL;
         }
         std::vector<T> getAllValue()
         {

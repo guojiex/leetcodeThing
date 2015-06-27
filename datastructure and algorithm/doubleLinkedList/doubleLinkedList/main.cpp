@@ -23,9 +23,13 @@ void test()
         printf("%d ",res[i]);
     printf("\n");
     guo_doubleLinkedList::iterator<int> iter=dList.begin();
-    printf("iter 0:%d\n",iter.getValue());
-    ++iter;
-    printf("iter 1:%d\n",iter.getValue());
+    int count=1;
+    while(iter)
+    {
+    printf("iter %d:%d\n",count,*iter);
+        ++iter;
+        ++count;
+    }
 }
 int main(int argc, const char * argv[]) {
     // insert code here...
