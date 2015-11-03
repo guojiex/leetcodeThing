@@ -58,6 +58,10 @@ private:
     };
 public:
     int getSize() const {return size;};
+    void levelTraversal()
+    {
+        
+    }
     binarySearchTree<T>(T rootVal)
     {
         size=0;
