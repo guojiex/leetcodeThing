@@ -11,30 +11,31 @@
 #include "doubleLinkedListNode.h"
 namespace guo_doubleLinkedList
 {
-    template<class T>
-    class iterator:ListNode<T>
-    {
-    public:
-        iterator<T>& operator=(const iterator &other)
-        {
-            this=other;
-            return *this;
-        }
-        bool operator==(const iterator &other)
-        {
-            return this==other;
-        }
-        iterator<T>& operator++()
-        {
-            this=this->Next();
-            return *this;
-        }
-    };
+//    template<class T>
+//    class iterator:ListNode<T>
+//    {
+//    public:
+//        iterator<T>& operator=(const iterator &other)
+//        {
+//            this=other;
+//            return *this;
+//        }
+//        bool operator==(const iterator &other)
+//        {
+//            return this==other;
+//        }
+//        iterator<T>& operator++()
+//        {
+//            this=this->Next();
+//            return *this;
+//        }
+//    };
     
     template<class T>
     class doubleLinkedList
     {
-    private:
+//    private:
+    public:
         ListNode<T>* head;
         ListNode<T>* tail;
         int size;
@@ -45,14 +46,14 @@ namespace guo_doubleLinkedList
             size=0;
         }
         bool empty()const{return size==0;}
-        iterator<T> begin() const
-        {
-            return iterator<T>(this->head);
-        }
-        iterator<T> end() const
-        {
-            return NULL;
-        }
+//        iterator<T> begin() const
+//        {
+//            return iterator<T>(this->head);
+//        }
+//        iterator<T> end() const
+//        {
+//            return NULL;
+//        }
         std::vector<T> getAllValue()
         {
             std::vector<T> res;
@@ -78,6 +79,19 @@ namespace guo_doubleLinkedList
                 head=head->Next();
                 delete temp;
                 temp=nullptr;
+                --size;
+            }
+        }
+        void pop_node(ListNode<T>* node){
+            if(node==head){
+                pop_front();
+            }else if(node==tail){
+                pop_back();
+            }else{
+                node->Parent()->Next(node->Next());
+                node->Next()->Parent(node->Parent());
+                delete node;
+                node=nullptr;
                 --size;
             }
         }
