@@ -9,8 +9,9 @@
 #include "funcMacro.h"
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    /**
+     *  测试 __func__ 宏定义
+     */
     FuncMacro::testFuncMacro();
     return 0;
 }
