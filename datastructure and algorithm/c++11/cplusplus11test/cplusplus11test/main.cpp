@@ -8,7 +8,7 @@
 #include <iostream>
 #include "funcMacro.h"
 #include "funcTemplate.h"
-
+#include "DelegateConstructor.h"
 
 int main(int argc, const char * argv[]) {
     /**
@@ -16,5 +16,6 @@ int main(int argc, const char * argv[]) {
      */
     FuncMacro::testFuncMacro();
     FunctionTemplate::test();
+    DelegateConstructor::test();
     return 0;
 }
