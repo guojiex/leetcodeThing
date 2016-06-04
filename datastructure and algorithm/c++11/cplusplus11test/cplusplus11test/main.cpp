@@ -7,11 +7,14 @@
 //
 #include <iostream>
 #include "funcMacro.h"
+#include "funcTemplate.h"
+
 
 int main(int argc, const char * argv[]) {
     /**
      *  测试 __func__ 宏定义
      */
     FuncMacro::testFuncMacro();
+    FunctionTemplate::test();
     return 0;
 }
