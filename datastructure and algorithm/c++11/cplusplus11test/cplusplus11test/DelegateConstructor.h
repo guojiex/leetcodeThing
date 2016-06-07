@@ -10,14 +10,16 @@ _Pragma("once");
 namespace DelegateConstructor {
     class Person{
     public:
-        Person(){}
+        Person():Person(10,'T'){}
         Person(int newage) : Person() { this->age=newage; }
         Person(char newgender) : Person() { this->gender=newgender; }
+        
         friend std::ostream& operator << (std::ostream& output,const Person person){
             output << person.age << " " << person.gender << std::endl ;
             return output;
         }
     private:
+        Person(int a,char g):age(a),gender(g){}
         int age {25};
         char gender {'F'};
     };
