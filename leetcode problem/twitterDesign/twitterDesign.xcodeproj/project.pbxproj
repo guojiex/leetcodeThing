@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		18F2F1771D0033EA0041DF28 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18F2F1761D0033EA0041DF28 /* main.cpp */; };
+		18EF80E21D0EC65F00C9978D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18EF80E11D0EC65F00C9978D /* main.cpp */; };
+		18EF80EA1D0EC68300C9978D /* Twitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18EF80E81D0EC68300C9978D /* Twitter.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		18F2F1711D0033EA0041DF28 /* CopyFiles */ = {
+		18EF80DC1D0EC65F00C9978D /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -23,16 +24,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		18B904021D0AC073000DF503 /* DecltypeTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DecltypeTest.h; sourceTree = "<group>"; };
-		18F2F1731D0033EA0041DF28 /* cplusplus11test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = cplusplus11test; sourceTree = BUILT_PRODUCTS_DIR; };
-		18F2F1761D0033EA0041DF28 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		18F2F17E1D0034C20041DF28 /* funcMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = funcMacro.h; sourceTree = "<group>"; };
-		18F2F17F1D026FAF0041DF28 /* funcTemplate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = funcTemplate.h; sourceTree = "<group>"; };
-		18F2F1801D028D060041DF28 /* DelegateConstructor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DelegateConstructor.h; sourceTree = "<group>"; };
+		18EF80DE1D0EC65F00C9978D /* twitterDesign */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = twitterDesign; sourceTree = BUILT_PRODUCTS_DIR; };
+		18EF80E11D0EC65F00C9978D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		18EF80E81D0EC68300C9978D /* Twitter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Twitter.cpp; sourceTree = "<group>"; };
+		18EF80E91D0EC68300C9978D /* Twitter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Twitter.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		18F2F1701D0033EA0041DF28 /* Frameworks */ = {
+		18EF80DB1D0EC65F00C9978D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,98 +41,97 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		18F2F16A1D0033EA0041DF28 = {
+		18EF80D51D0EC65F00C9978D = {
 			isa = PBXGroup;
 			children = (
-				18F2F1751D0033EA0041DF28 /* cplusplus11test */,
-				18F2F1741D0033EA0041DF28 /* Products */,
+				18EF80E01D0EC65F00C9978D /* twitterDesign */,
+				18EF80DF1D0EC65F00C9978D /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		18F2F1741D0033EA0041DF28 /* Products */ = {
+		18EF80DF1D0EC65F00C9978D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				18F2F1731D0033EA0041DF28 /* cplusplus11test */,
+				18EF80DE1D0EC65F00C9978D /* twitterDesign */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		18F2F1751D0033EA0041DF28 /* cplusplus11test */ = {
+		18EF80E01D0EC65F00C9978D /* twitterDesign */ = {
 			isa = PBXGroup;
 			children = (
-				18F2F1761D0033EA0041DF28 /* main.cpp */,
-				18F2F17E1D0034C20041DF28 /* funcMacro.h */,
-				18F2F17F1D026FAF0041DF28 /* funcTemplate.h */,
-				18F2F1801D028D060041DF28 /* DelegateConstructor.h */,
-				18B904021D0AC073000DF503 /* DecltypeTest.h */,
+				18EF80E11D0EC65F00C9978D /* main.cpp */,
+				18EF80E81D0EC68300C9978D /* Twitter.cpp */,
+				18EF80E91D0EC68300C9978D /* Twitter.hpp */,
 			);
-			path = cplusplus11test;
+			path = twitterDesign;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		18F2F1721D0033EA0041DF28 /* cplusplus11test */ = {
+		18EF80DD1D0EC65F00C9978D /* twitterDesign */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 18F2F17A1D0033EA0041DF28 /* Build configuration list for PBXNativeTarget "cplusplus11test" */;
+			buildConfigurationList = 18EF80E51D0EC65F00C9978D /* Build configuration list for PBXNativeTarget "twitterDesign" */;
 			buildPhases = (
-				18F2F16F1D0033EA0041DF28 /* Sources */,
-				18F2F1701D0033EA0041DF28 /* Frameworks */,
-				18F2F1711D0033EA0041DF28 /* CopyFiles */,
+				18EF80DA1D0EC65F00C9978D /* Sources */,
+				18EF80DB1D0EC65F00C9978D /* Frameworks */,
+				18EF80DC1D0EC65F00C9978D /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = cplusplus11test;
-			productName = cplusplus11test;
-			productReference = 18F2F1731D0033EA0041DF28 /* cplusplus11test */;
+			name = twitterDesign;
+			productName = twitterDesign;
+			productReference = 18EF80DE1D0EC65F00C9978D /* twitterDesign */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		18F2F16B1D0033EA0041DF28 /* Project object */ = {
+		18EF80D61D0EC65F00C9978D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = guoskyhero;
 				TargetAttributes = {
-					18F2F1721D0033EA0041DF28 = {
+					18EF80DD1D0EC65F00C9978D = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
 				};
 			};
-			buildConfigurationList = 18F2F16E1D0033EA0041DF28 /* Build configuration list for PBXProject "cplusplus11test" */;
+			buildConfigurationList = 18EF80D91D0EC65F00C9978D /* Build configuration list for PBXProject "twitterDesign" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 18F2F16A1D0033EA0041DF28;
-			productRefGroup = 18F2F1741D0033EA0041DF28 /* Products */;
+			mainGroup = 18EF80D51D0EC65F00C9978D;
+			productRefGroup = 18EF80DF1D0EC65F00C9978D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				18F2F1721D0033EA0041DF28 /* cplusplus11test */,
+				18EF80DD1D0EC65F00C9978D /* twitterDesign */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		18F2F16F1D0033EA0041DF28 /* Sources */ = {
+		18EF80DA1D0EC65F00C9978D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18F2F1771D0033EA0041DF28 /* main.cpp in Sources */,
+				18EF80E21D0EC65F00C9978D /* main.cpp in Sources */,
+				18EF80EA1D0EC68300C9978D /* Twitter.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		18F2F1781D0033EA0041DF28 /* Debug */ = {
+		18EF80E31D0EC65F00C9978D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -177,7 +175,7 @@
 			};
 			name = Debug;
 		};
-		18F2F1791D0033EA0041DF28 /* Release */ = {
+		18EF80E41D0EC65F00C9978D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -214,14 +212,14 @@
 			};
 			name = Release;
 		};
-		18F2F17B1D0033EA0041DF28 /* Debug */ = {
+		18EF80E61D0EC65F00C9978D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		18F2F17C1D0033EA0041DF28 /* Release */ = {
+		18EF80E71D0EC65F00C9978D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -231,25 +229,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		18F2F16E1D0033EA0041DF28 /* Build configuration list for PBXProject "cplusplus11test" */ = {
+		18EF80D91D0EC65F00C9978D /* Build configuration list for PBXProject "twitterDesign" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				18F2F1781D0033EA0041DF28 /* Debug */,
-				18F2F1791D0033EA0041DF28 /* Release */,
+				18EF80E31D0EC65F00C9978D /* Debug */,
+				18EF80E41D0EC65F00C9978D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		18F2F17A1D0033EA0041DF28 /* Build configuration list for PBXNativeTarget "cplusplus11test" */ = {
+		18EF80E51D0EC65F00C9978D /* Build configuration list for PBXNativeTarget "twitterDesign" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				18F2F17B1D0033EA0041DF28 /* Debug */,
-				18F2F17C1D0033EA0041DF28 /* Release */,
+				18EF80E61D0EC65F00C9978D /* Debug */,
+				18EF80E71D0EC65F00C9978D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 18F2F16B1D0033EA0041DF28 /* Project object */;
+	rootObject = 18EF80D61D0EC65F00C9978D /* Project object */;
 }

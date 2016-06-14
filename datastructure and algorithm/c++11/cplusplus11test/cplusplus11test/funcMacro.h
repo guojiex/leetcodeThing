@@ -16,7 +16,6 @@ _Pragma("once");
  */
 namespace FuncMacro{
     class TestClass{
-        
     private:
         const char* name;
     public:

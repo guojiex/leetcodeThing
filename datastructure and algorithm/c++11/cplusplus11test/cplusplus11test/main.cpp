@@ -9,6 +9,7 @@
 #include "funcMacro.h"
 #include "funcTemplate.h"
 #include "DelegateConstructor.h"
+#include "DecltypeTest.h"
 
 int main(int argc, const char * argv[]) {
     /**
@@ -17,5 +18,6 @@ int main(int argc, const char * argv[]) {
     FuncMacro::testFuncMacro();
     FunctionTemplate::test();
     DelegateConstructor::test();
+    DecltypeTest::test();
     return 0;
 }
