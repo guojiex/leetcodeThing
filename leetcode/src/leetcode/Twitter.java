@@ -7,16 +7,19 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.PriorityQueue;
 
 /**
  * @author Jiexin Guo
  */
 public class Twitter {
     private Map<Integer, User> userMap = new HashMap<>();
-    private List<Integer> tweetList = new ArrayList<>();
+    private int timestamp = 0;
 
     /** Initialize your data structure here. */
     public Twitter() {
+        userMap.clear();
+        this.timestamp = 0;
     }
 
     /** Compose a new tweet. */
@@ -25,8 +28,7 @@ public class Twitter {
             User user = new UserImpl(userId);
             this.userMap.put(userId, user);
         }
-        this.userMap.get(userId).postTweet(tweetId);
-        this.tweetList.add(tweetId);
+        this.userMap.get(userId).postTweet(new Tweet(tweetId, timestamp++));
     }
 
     /**
@@ -35,7 +37,7 @@ public class Twitter {
      * user herself. Tweets must be ordered from most recent to least recent.
      */
     public List<Integer> getNewsFeed(int userId) {
-        List<Integer> result = new ArrayList<>();
+        PriorityQueue<Tweet> result = new PriorityQueue<>();
         if (this.userMap.containsKey(userId)) {
             User user = this.userMap.get(userId);
             result.addAll(user.getTweets());
@@ -46,13 +48,8 @@ public class Twitter {
         }
 
         List<Integer> toReturn = new ArrayList<>();
-        for (int i = this.tweetList.size() - 1; i >= 0; i--) {
-            if (result.contains(this.tweetList.get(i))) {
-                toReturn.add(this.tweetList.get(i));
-            }
-            if (toReturn.size() == 10) {
-                break;
-            }
+        while (toReturn.size() < 10 && !result.isEmpty()) {
+            toReturn.add(result.poll().getTweetId());
         }
         return toReturn;
     }
@@ -81,8 +78,36 @@ public class Twitter {
         }
     }
 
+    private static class Tweet implements Comparable<Tweet> {
+        private int tweetId;
+        private int timestamp;
+
+        /**
+         * @param tweetId
+         * @param timestamp
+         */
+        public Tweet(int tweetId, int timestamp) {
+            super();
+            this.tweetId = tweetId;
+            this.timestamp = timestamp;
+        }
+
+        /**
+         * @return the tweetId
+         */
+        protected int getTweetId() {
+            return tweetId;
+        }
+
+        @Override
+        public int compareTo(Tweet o) {
+            return o.timestamp - this.timestamp;
+        }
+
+    }
+
     interface User {
-        public void postTweet(int tweetId);
+        public void postTweet(Tweet tweet);
 
         public int getUserId();
 
@@ -92,12 +117,12 @@ public class Twitter {
 
         public void unfollow(User followed);
 
-        public List<Integer> getTweets();
+        public List<Tweet> getTweets();
     }
 
     private static class UserImpl implements User {
         private List<User> followedList = new ArrayList<>();
-        private List<Integer> tweetList = new ArrayList<>();
+        private List<Tweet> tweetList = new ArrayList<>();
         private int userId;
 
         /*
@@ -137,8 +162,8 @@ public class Twitter {
         }
 
         @Override
-        public void postTweet(int tweetId) {
-            this.tweetList.add(tweetId);
+        public void postTweet(Tweet tweet) {
+            this.tweetList.add(tweet);
         }
 
         @Override
@@ -160,13 +185,13 @@ public class Twitter {
 
         @Override
         public void follow(User follower) {
-            if (follower != null) {
+            if (!this.equals(follower) && !this.followedList.contains(follower)) {
                 this.followedList.add(follower);
             }
         }
 
         @Override
-        public List<Integer> getTweets() {
+        public List<Tweet> getTweets() {
             return new ArrayList<>(this.tweetList);
         }
     }
