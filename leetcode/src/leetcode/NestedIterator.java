@@ -41,8 +41,14 @@ public class NestedIterator implements Iterator<Integer> {
                 this._nestedListIterator=iteratorStack.pop();
             }
         }
+        return null;
     }
     
+    private Integer nextHelper() {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
     @Override
     public boolean hasNext() {
         return this._nestedListIterator.hasNext();

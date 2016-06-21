@@ -28,7 +28,6 @@ private:
             if(!test.isNumberIn(i))
             {
                 test.set(i);
-                //printf("setting number %d\n",i);
                 if(!test.isNumberIn(i))
                 {
                     printf("fail when setting number:%d\n",i);

@@ -23,7 +23,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		185E82621B0CB6B700810CBA /* cppunitTester.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cppunitTester.h; sourceTree = "<group>"; };
 		18ABC8D01AE9E731001D33D9 /* BITMAP */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BITMAP; sourceTree = BUILT_PRODUCTS_DIR; };
 		18ABC8D31AE9E731001D33D9 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		18ABC8DC1AE9E787001D33D9 /* bitmap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bitmap.h; sourceTree = "<group>"; };
@@ -79,7 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				18ABC8E21AEA315A001D33D9 /* bitmapUnittester.h */,
-				185E82621B0CB6B700810CBA /* cppunitTester.h */,
 			);
 			name = "unit test";
 			sourceTree = "<group>";
