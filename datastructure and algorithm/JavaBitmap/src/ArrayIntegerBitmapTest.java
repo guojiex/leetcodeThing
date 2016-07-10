@@ -20,7 +20,7 @@ import org.junit.Test;
  */
 public class ArrayIntegerBitmapTest {
     
-    private List<Integer> getDiffIntegers(Random random, int size, int upperBound) {
+    private List<Integer> getRandomIntegers(Random random, int size, int upperBound) {
         List<Integer> result = new ArrayList<>();
         while (size > 0) {
             int temp = random.nextInt(upperBound);
@@ -37,7 +37,7 @@ public class ArrayIntegerBitmapTest {
         int upperBound = 100000;
         Random random = new Random(seed);
         Bitmap<Integer> bitmap = new ArrayIntegerBitmap();
-        List<Integer> noDuplicate = this.getDiffIntegers(random, size, upperBound);
+        List<Integer> noDuplicate = this.getRandomIntegers(random, size, upperBound);
         Set<Integer> temp = new HashSet<>();
         temp.addAll(noDuplicate);
         noDuplicate.clear();
