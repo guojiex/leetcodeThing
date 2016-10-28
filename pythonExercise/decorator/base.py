@@ -18,6 +18,10 @@ class Base:
     def OriginFunction(self):
         print('origin function')
 
+    @WithPreAndPostFunction
+    def OriginFunctionWrapped(self):
+        self.OriginFunction()
+
     def testOriginFunction(self):
         self.OriginFunction()
 
@@ -27,5 +31,9 @@ class Base:
 if __name__ == '__main__':
     base = Base()
     base.OriginFunction()
+    print('===')
+    base.OriginFunctionWrapped()
+    print('===')
     base.testOriginFunction()
+    print('===')
     base.testOriginFunction2()
