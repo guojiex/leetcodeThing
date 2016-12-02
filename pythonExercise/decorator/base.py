@@ -25,8 +25,6 @@ class Base:
     def testOriginFunction(self):
         self.OriginFunction()
 
-    def testOriginFunction2(self):
-        self.OriginFunction()
 
 if __name__ == '__main__':
     base = Base()
@@ -36,4 +34,3 @@ if __name__ == '__main__':
     print('===')
     base.testOriginFunction()
     print('===')
-    base.testOriginFunction2()
