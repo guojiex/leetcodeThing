@@ -7,4 +7,4 @@ An implement of bitmap algorithm, which can save a lot of none overlapping integ
 ###Contact
 ![My icon](./img/catIcon.jpg "Jiexin Guo")
 
-Contact me on <1036479561@qq.com> or <jiexing@andrew.cmu.edu> 
+Contact me on <1036479561@qq.com> or <jiexing.jg@gmail.com> 
