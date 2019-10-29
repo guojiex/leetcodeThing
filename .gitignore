@@ -40,3 +40,12 @@ datastructure and algorithm/trieTreeFull/trieTreeFull/main
 *.xcbkptlist
 
 datastructure and algorithm/binary search tree/binary search tree.xcodeproj/project.xcworkspace/xcuserdata/apple.xcuserdatad/UserInterfaceState.xcuserstate
+
+# Xcode
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcuserstate
+project.xcworkspace/
+xcuserdata/
